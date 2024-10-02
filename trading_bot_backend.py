@@ -17,7 +17,7 @@ class TradingBot:
         spx = yf.Ticker('^GSPC')
         df = spx.history(period='max')
 
-        df['Return'] = df['Close'].pct_change()*100
+        df['Return'] = df['Close'].pct_change()
 
         return df
 
